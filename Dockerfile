@@ -20,7 +20,10 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 WORKDIR /app
 
 # Install Python dependencies with fixed versions for security
-RUN pip install --no-cache-dir "unstructured[all-docs]==0.10.30" "unstructured-api==0.10.30" "uvicorn[standard]==0.24.0.post1"
+RUN pip install --no-cache-dir \
+    "unstructured[all-docs]>=0.11.0" \
+    "fastapi>=0.104.1" \
+    "uvicorn[standard]>=0.24.0"
 
 # Copy application files
 COPY --chown=appuser:appuser . .
