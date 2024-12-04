@@ -7,5 +7,5 @@ restartPolicyType = "ON_FAILURE"
 numReplicas = 1
 
 [service]
-internal_port = 8000
+internal_port = 8080
 private_networking = true
