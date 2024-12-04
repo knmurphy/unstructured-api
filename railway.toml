@@ -3,7 +3,7 @@ builder = "DOCKERFILE"
 dockerfilePath = "Dockerfile"
 
 [deploy]
-healthcheckPath = "/status"
+healthcheckPath = "/health"
 healthcheckTimeout = 100
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
@@ -11,5 +11,5 @@ numReplicas = 1
 
 # Make this service private
 [service]
-internal_port = 8000
+internal_port = 8080
 private_networking = true
